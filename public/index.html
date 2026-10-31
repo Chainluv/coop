@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CO-OP — Make connections. Make records.</title>
+  <meta name="description" content="CO-OP is a collaboration arena for music artists. Link up, make records, climb the ranks.">
+  <meta name="theme-color" content="#07060c">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="logo" data-link aria-label="CO-OP home">
+        <svg class="logo-crown" viewBox="0 0 24 14" aria-hidden="true"><path d="M2 13 0 3l6 4 6-7 6 7 6-4-2 10z" fill="currentColor"/></svg>
+        CO&#8209;OP
+      </a>
+      <nav class="mainnav" aria-label="Main">
+        <a href="/" data-link data-nav="arena">Arena</a>
+        <a href="/discover" data-link data-nav="discover">Discover</a>
+        <a href="/leaderboard" data-link data-nav="leaderboard">Leaderboard</a>
+      </nav>
+      <form class="topsearch" role="search" action="/discover">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <label class="sr-only" for="topsearch-q">Search artists</label>
+        <input id="topsearch-q" name="q" type="search" placeholder="Search artists, genres, or cities…" autocomplete="off">
+      </form>
+      <div class="account" id="account"></div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Main">
+    <a href="/" data-link data-nav="arena"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 2 7l5 4 5-7 5 7 5-4-2 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Arena</a>
+    <a href="/discover" data-link data-nav="discover"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Discover</a>
+    <a href="/leaderboard" data-link data-nav="leaderboard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11h4v9M10 20V5h4v15M16 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Ranks</a>
+    <a href="/inbox" data-link data-nav="inbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h5l1 3h6l1-3h5M5 5h14l2 8v6H3v-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Inbox<span class="dot-badge" data-inbox-badge hidden></span></a>
+    <a href="/me" data-link data-nav="me"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Profile</a>
+  </nav>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
